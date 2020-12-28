@@ -14,6 +14,7 @@ public class ProducerConsumerPattern {
                         if(queue.offer(item))
                         System.out.println("Item produced : " + item + " queue size :" + queue.size());
             }
+		Thread.interrupted();
                 System.out.println("Producer is Interrupted");
         });
 
@@ -38,10 +39,6 @@ public class ProducerConsumerPattern {
         
         producer.interrupt();
     }
-
-}
-
-class CustomBlockingQueue {
 
 }
 
